@@ -1,0 +1,370 @@
+	@import "_null_style";
+   
+ 
+	%logo{
+		margin: 0 auto 300px auto;
+		padding-top: 150px;
+		height: 130px;
+		width: 200px; 
+	}
+	
+	%container__meny{
+		width: 415px;
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		margin: 0 auto;
+	}
+	%meny{
+		justify-content: center;
+		font-size: 15px;
+		line-height: 1.2;
+	}
+	%meny__active{
+		color: rgb(173, 160, 116);
+	}
+	
+	%container-botton{
+			margin: 230px calc(50% - 100px) 0;
+			padding: 66px 0;
+			color: white;
+	}
+	%botton__read-more{
+		width: 182px;
+		height: 47px;
+		box-sizing: border-box;
+		border: 1px solid white;
+		text-align: center;
+		line-height: 48px;
+		letter-spacing: 2px;
+	}
+
+	*{
+		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	}
+
+	/* header */
+	.header {
+
+		&_title-great, &__subtitle {
+		  font-size: 34px;
+		  color: rgb(255, 255, 255);
+		  text-transform: uppercase;
+		  line-height: 40px;
+		  text-align: center;
+		  font-weight: 400;
+		}
+		.title{
+			&:after{
+				background: white;
+				width: 105px;
+				height: 2px;
+				margin-left: -55px;
+			}
+		}
+		&__body {
+			background: url('../img/header/BG-Header.png') center no-repeat;
+			background-size: 150%;
+			width: 100%;		
+		}
+		&__logo {
+			@extend %logo;
+		}		
+		&__title {}
+		&__subtitle {
+			font-size: 26px;
+			text-transform: lowercase;
+		}
+		&__container-botton {
+			@extend %container-botton;
+		}
+		&__read-more {
+			@extend %botton__read-more;
+		}
+		&__arrow {
+			margin: 72px auto;
+			width: 20px;
+			height: 12px;
+		}
+	}
+	
+	/* nav */
+	.nav {
+		&__body {
+			margin-bottom: 127px;
+			border: 1px solid #F2F2F2;
+		}
+		&__container {
+			@extend %container__meny;
+		}
+		&__link {
+		  @extend %meny;
+			&__active {
+		  	@extend %meny__active;
+			}
+			
+
+	}
+	} 
+
+	/* about*/
+	.about {
+		&__body {
+			max-width: 823px;
+			margin: 0 auto;
+		}
+		&__header {
+			margin-bottom: 65px;
+		}
+		&__title {
+			margin-bottom: 30px;
+		}
+		&__text {
+		  max-width: 660px;
+		  font-size: 14px;
+		  color: rgb(134, 133, 133);
+		  line-height: 25px;
+		  text-align: center;
+		  margin: 0 auto;
+		}
+		&__row {
+			display: flex;
+			margin: 0px 0 96px -100px;
+		}
+		&__column {
+			padding: 0 15px;
+			flex: 0 0 38.333%;
+		}
+	}
+
+	.title {
+		font-size: 34px;
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: 8.95px;
+		position: relative;
+		padding-bottom: 30px;
+		font-weight: 700;
+		&:after{
+		  content: '';
+		  background-color: rgb(0, 0, 0);
+		  position: absolute;
+		  left: 50%;
+		  height: 1px;
+		  width: 50px;
+		  bottom: 0;
+		  margin-left: -25px;
+		}
+	}
+
+	.item_about {
+		&__icon {
+			border-radius: 50%;
+			border: 1px solid #BBB08B;
+			width: 90px;
+			height: 90px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 30px auto;
+		}
+		&__title {
+			font-size: 22px;
+			color: rgb(0, 0, 0);
+			line-height: 1.2;
+			text-align: center;
+			letter-spacing: 5px;
+			margin-bottom: 35px;
+			font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+		}
+		&__text {
+		  font-size: 14px;
+		  color: rgb(134, 133, 133);
+		  line-height: 1.857;
+		  text-align: center;
+		}
+	}
+
+	/* portfolio*/
+	.portfolio {
+	&__body {
+		background: #F3F3F3;
+		padding-top: 98px;
+		max-width: 100%;
+	}
+	&__title {
+		font-weight: 500;
+		margin-bottom: 30px;
+	}
+	&__row {}
+	&__container {
+		@extend %container__meny;
+		margin-bottom: 133px;
+	}
+	&__link {
+		@extend %meny;
+		&__active {
+			@extend %meny__active;
+		}
+	}
+	
+	&__galary {
+		width: 1130px;
+		margin: 0 auto;
+	}
+	&__foto {
+		height: 361px;
+		width: 538px;
+		background: #EAEAEA;
+		margin: 9px ;
+		float: left;
+	}
+	&__foto1 {}
+	&__foto2 {}
+	&__foto3 {}
+	&__foto4 {}
+	&__foto5 {}
+	&__foto6 {}
+	&__container-botton{
+		@extend %container-botton;
+		color: black;
+		clear: both;
+	}
+	&__read-more {
+		@extend %botton__read-more;
+		border: 1px solid black;
+		clear: both;
+	}
+}
+
+/* patners*/
+.patners {
+	&__body {
+		background: url("../img/patners/BG-Patners.png") center no-repeat;
+		background-size: cower;
+		
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	&__title {
+		padding-top: 90px;
+		font-size: 30px;
+		line-height: 1.2;
+		text-align: center;
+		color: white;
+		margin-bottom: 95px;
+		letter-spacing: 4px;
+		font-weight: 400;
+  	}
+	&__row {
+		display: flex;
+		justify-content: space-around;
+		width: 606px;
+		min-height: 150px;
+		margin: 0 auto;
+	}
+}
+
+/* contact*/
+.contact {
+	&__body {
+		padding-top: 170px;
+	}
+	&__title {
+		margin-bottom: 105px;
+	}
+	&__container {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__form {
+		width: 450px;
+		margin-right: 36px;
+	}
+	&__container-for-input{}
+	&__input {
+		font-size: 14px;
+		text-transform: uppercase;
+		line-height: 1.2;
+		width: 161px;
+		border-bottom: 1px solid black;
+		display: inline-block;
+		padding-bottom: 16px;
+		margin: 0 29px 75px 29px;
+		&:last-child{
+			width: 383px;
+		}
+	}
+
+	&__button{
+		position: relative;
+		left: 82%;
+		margin-bottom: 100px;
+		background: white;
+		letter-spacing: 2px
+	}          
+
+	&__info {
+		width: 246px;
+		font-size: 14px;
+		line-height: 26px;
+		margin-left: 36px;
+	}
+	&__text {
+		margin-bottom: 35px;	
+	}
+	&__name {
+		margin-bottom: 25px;
+	}
+	&__img1 {
+		display: flex;
+		justify-content: center;
+		margin-right: 28px;
+		border: 1px solid black;
+		border-radius: 50%;
+		width: 38px;
+		height: 38px;
+		align-items: center;
+		float: left;
+
+	}
+	&__img2 {
+		display: flex;
+		justify-content: center;
+		margin-right: 28px;
+		border: 1px solid black;
+		border-radius: 50%;
+		width: 38px;
+		height: 38px;
+		align-items: center;
+	}
+	&__mail {}
+}
+
+
+/* footer*/
+.footer {
+	background: #3C3C3C;
+	&__logo {
+		@extend %logo;
+		margin: 0 auto 150px auto;
+		padding-top: 80px;
+	}
+	&__row, &__subtitle {
+		display: flex;
+		justify-content: space-around;
+		width: 606px;
+		margin: 0 auto;
+		font-size: 14px;
+		color: rgb(164, 164, 164);
+		line-height: 1.2;
+		text-align: left;
+
+	}
+	&__subtitle {
+		margin-top: 30px;
+		padding-bottom: 52px; 
+	}
+}
